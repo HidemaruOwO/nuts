@@ -19,7 +19,7 @@ func Error(err error) {
 
 func ErrorExit(err error) {
 	Error(err)
-	os.Exit(1)
+	panic(err)
 }
 
 func Warnf(format string, a ...any) {
